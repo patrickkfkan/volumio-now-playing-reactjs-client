@@ -2,6 +2,9 @@ Web client served by [Volumio Now Playing plugin](https://github.com/patrickkfka
 
 ## Changelog
 
+0.7.5
+- Add support for 'IdleScreen -> Show Clock' setting ([@phts](https://github.com/phts) - [#5](https://github.com/patrickkfkan/volumio-now-playing-reactjs-client/pull/5))
+
 0.7.4
 - Update socket.io v2
 
