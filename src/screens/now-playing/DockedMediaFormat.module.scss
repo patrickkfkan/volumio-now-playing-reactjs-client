@@ -8,14 +8,16 @@
   min-height: calc(var(--base-font-size, 1em) * 1.5);
 
   &__format {
+    display: flex;
+    gap: 5px;
     margin: var(--docked-margin, inherit);
   }
 
   &__formatIcon {
     height: var(--font-size);
-    margin-right: 5px;
   }
 
+  &__formatText,
   &__formatResolution {
     font-size: var(--font-size);
     color: var(--font-color);

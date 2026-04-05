@@ -39,7 +39,14 @@ function TrackInfoText(props: TrackInfoTextProps) {
   const artist = playerState.artist || '';
   const album = playerState.album || '';
   const formatResolution = getFormatResolution(playerState);
-  const formatIcon = getFormatIcon(playerState.trackType, host);
+
+  const codec = (playerState.trackType || '') === (playerState.codec || '') ? null : playerState.codec;
+  let formatIcon = getFormatIcon(playerState.trackType, host);
+  const formatText = formatIcon ? null : playerState.trackType;
+  if (!formatIcon && codec) {
+    formatIcon = getFormatIcon(codec, host);
+  }
+
   const concatArtistAlbum = props.concatArtistAlbum !== undefined && props.concatArtistAlbum;
   const visibility = props.trackInfoVisibility || DEFAULT_TRACK_INFO_VISIBILITY;
   const trackInfoOrder = props.trackInfoOrder || DEFAULT_TRACK_INFO_ORDER;
@@ -169,6 +176,7 @@ function TrackInfoText(props: TrackInfoTextProps) {
         return (
           <div key={key} className={getElementClassName('format')}>
             {formatIcon ? <img src={formatIcon} className={getElementClassName('formatIcon')} alt="" /> : null}
+            {formatText && <span className={getElementClassName('formatText')}>{formatText}</span>}
             <span className={getElementClassName('formatResolution')}>{formatResolution}</span>
           </div>
         );

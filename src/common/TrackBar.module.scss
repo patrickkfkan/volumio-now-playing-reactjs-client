@@ -65,6 +65,8 @@
   }
 
   &__format {
+    display: flex;
+    gap: 5px;
     line-height: var(--trackbar-format-line-height);
     margin-top: auto;
   }
@@ -73,6 +75,7 @@
     height: var(--trackbar-format-line-height);
   }
 
+  &__formatText,
   &__formatResolution {
     font-family: var(--trackbar-format-resolution-font-family);
     font-size: var(--trackbar-format-resolution-font-size);

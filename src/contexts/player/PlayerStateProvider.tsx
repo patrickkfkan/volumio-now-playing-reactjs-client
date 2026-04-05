@@ -11,6 +11,7 @@ export interface PlayerState {
   albumart?: string;
   uri: '';
   trackType?: string;
+  codec?: string;
   seek?: number;
   duration?: number;
   samplerate?: string;
@@ -19,7 +20,7 @@ export interface PlayerState {
   channels?: number;
   volume?: number;
   mute?: boolean;
-  isStreaming?: boolean;
+  stream?: boolean;
   repeat?: boolean;
   repeatSingle?: boolean;
   random?: boolean;
@@ -37,6 +38,7 @@ const EMPTY_STATE: PlayerState = {
   albumart: '/albumart',
   uri: '',
   trackType: undefined,
+  codec: undefined,
   seek: 0,
   duration: 0,
   samplerate: undefined,

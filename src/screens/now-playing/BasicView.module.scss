@@ -89,6 +89,8 @@
   }
 
   &__format {
+    display: flex;
+    gap: 5px;
     margin: var(--media-info-margin);
   }
 
@@ -96,6 +98,7 @@
     height: var(--media-info-font-size);
   }
 
+  &__formatText,
   &__formatResolution {
     font-family: var(--media-info-font-style);
     font-size: var(--media-info-font-size);
