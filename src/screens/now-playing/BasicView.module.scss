@@ -92,6 +92,7 @@
     display: flex;
     gap: 5px;
     margin: var(--media-info-margin);
+    justify-content: var(--text-alignment-h);
   }
 
   &__formatIcon {
