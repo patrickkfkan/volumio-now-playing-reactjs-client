@@ -2,6 +2,9 @@ Web client served by [Volumio Now Playing plugin](https://github.com/patrickkfka
 
 ## Changelog
 
+0.7.7
+- Fix horizontal alignment not applied to format text in basic view.
+
 0.7.6
 - Show codec / format text in track info.
 
